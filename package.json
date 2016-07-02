@@ -1,0 +1,31 @@
+{
+  "name": "deepest-blue-server",
+  "version": "0.1.0",
+  "description": "Deepest Blue music transfer server",
+  "main": "source/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/deepest-blue-server.git"
+  },
+  "keywords": [
+    "music",
+    "transfer",
+    "mp3",
+    "remote",
+    "server"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perry-mitchell/deepest-blue-server/issues"
+  },
+  "homepage": "https://github.com/perry-mitchell/deepest-blue-server#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "recursive-readdir": "^2.0.0",
+    "socket.io-stream": "^0.9.0"
+  }
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const Scanner = require("./lib/Scanner.js");
+
+let argv = require('minimist')(process.argv.slice(2)),
+    scannerOptions = {};
+
+if (argv.directory) {
+    scannerOptions.scanDirectories = Array.isArray(argv.directory) ? argv.directory : [argv.directory];
+}
+if (argv["scan-interval"]) {
+    scannerOptions.scanInterval = parseInt(argv["scan-interval"], 10);
+}
+
+let scanner = new Scanner(scannerOptions);
+scanner.start();
+
+let env = {
+    args:           argv,
+    scanner
+};
