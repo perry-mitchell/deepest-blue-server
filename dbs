@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const Scanner = require("./lib/Scanner.js");
+const DBS = require("./lib/Server.js");
 
 let argv = require('minimist')(process.argv.slice(2)),
     scannerOptions = {};
@@ -19,3 +20,6 @@ let env = {
     args:           argv,
     scanner
 };
+
+let dbs = new DBS(env);
+dbs.start();
